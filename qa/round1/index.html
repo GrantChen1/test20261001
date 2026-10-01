@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML 與 Bootstrap 汽車展示網頁教學原型。">
+    <title>駕馭新視角｜汽車展示教學原型</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* 共用色彩集中管理；Bootstrap 元件透過變數配合原創配色。 */
+      :root {
+        --ink: #16202b;
+        --blue: #1e5b88;
+        --sky: #eef5f8;
+      }
+
+      body { color: var(--ink); }
+      section { scroll-margin-top: 1rem; }
+      .navbar { background: #fff; box-shadow: 0 2px 20px #152d4310; }
+      .brand-mark {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background: var(--blue);
+        transform: rotate(45deg);
+        margin-right: .5rem;
+      }
+      .skip-link { z-index: 1100; }
+      .hero {
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background: linear-gradient(115deg, #102a40e8, #15567eaa),
+          radial-gradient(circle at 75% 40%, #81bed6 0 13%, #24465d 13% 31%, #122536 31% 100%);
+      }
+      .hero h1 { max-width: 12ch; font-weight: 700; line-height: 1.15; }
+      .hero p { max-width: 40rem; }
+      .section-title { font-weight: 700; letter-spacing: .02em; }
+      .vehicle-art {
+        min-height: 180px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #edf5f8, #c7dce6);
+      }
+      .vehicle-art span { font-size: 4rem; line-height: 1; color: #6e96aa; }
+      .card { border-color: #dbe4e8; box-shadow: 0 8px 28px #1630440c; }
+      .feature { background: var(--sky); }
+      .text-muted-custom { color: #52616e; }
+      .text-primary { color: var(--blue) !important; }
+      .btn-primary {
+        --bs-btn-bg: var(--blue);
+        --bs-btn-border-color: var(--blue);
+        --bs-btn-hover-bg: #17486c;
+        --bs-btn-hover-border-color: #17486c;
+        --bs-btn-active-bg: #123a58;
+        --bs-btn-active-border-color: #123a58;
+      }
+      .btn-outline-primary {
+        --bs-btn-color: var(--blue);
+        --bs-btn-border-color: var(--blue);
+        --bs-btn-hover-bg: var(--blue);
+        --bs-btn-hover-border-color: var(--blue);
+        --bs-btn-active-bg: #17486c;
+        --bs-btn-active-border-color: #17486c;
+      }
+      :focus-visible { outline: 3px solid #925000 !important; outline-offset: 3px; }
+      .hero :focus-visible, footer :focus-visible { outline-color: #ffca80 !important; }
+      .nav-link, .navbar-toggler, .btn { min-height: 44px; }
+      .nav-link { display: flex; align-items: center; }
+      .category-list { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
+      .category-list li { padding: .4rem .75rem; background: var(--sky); border-radius: .5rem; }
+      /* 手機縮小主視覺留白；卡片欄數交給 Bootstrap 的 md / lg 斷點。 */
+      @media (max-width: 575.98px) {
+        .hero { min-height: 420px; }
+        .hero .container { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .card { transition: transform .2s, box-shadow .2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px #1630441a; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link visually-hidden-focusable position-absolute bg-white p-2" href="#main">跳到主要內容</a>
+    <header>
+      <nav class="navbar navbar-expand-lg" aria-label="主選單">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#top">
+            <span class="brand-mark" aria-hidden="true"></span>駕馭新視角
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="開啟選單">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <!-- lg 以下折疊選單；連結都是可直接操作的頁內錨點。 -->
+            <ul class="navbar-nav ms-auto gap-lg-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#research">研究說明</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#models">示意車款</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#approach">設計方法</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">表單示範</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero py-5" aria-labelledby="hero-title">
+        <div class="container py-5">
+          <p class="text-uppercase fw-semibold mb-3">HTML × Bootstrap 課堂作品</p>
+          <h1 id="hero-title" class="display-3 mb-4">探索不同的移動想像</h1>
+          <p class="lead mb-4">從資訊架構、響應式卡片到清楚的行動入口，練習製作一個易讀、可操作的汽車展示頁。</p>
+          <a class="btn btn-light btn-lg" href="#models">探索示意車款</a>
+        </div>
+      </section>
+      <!-- 靜態主視覺之後，先交代觀察來源與原創界線。 -->
+      <section id="research" class="py-5" aria-labelledby="research-title">
+        <div class="container">
+          <h2 id="research-title" class="section-title">品牌研究與課堂再創作</h2>
+          <p class="mb-2">以 BMW 台灣車型總覽的「分類 → 比較 → 行動」流程為觀察案例，練習 HTML5、Bootstrap 與少量原生 JavaScript。</p>
+          <p class="mb-0 text-muted-custom">這是非官方課堂作品。車名、文案與幾何圖形皆為原創示意，請勿輸入真實個人資料。</p>
+        </div>
+      </section>
+      <section id="models" class="py-5" aria-labelledby="models-title">
+        <div class="container py-4">
+          <p class="text-uppercase text-muted-custom fw-semibold mb-2">Explore</p>
+          <h2 id="models-title" class="section-title mb-2">三種旅程，一種好奇</h2>
+          <p class="text-muted-custom mb-4">以下名稱與分類皆為教學示意，沒有對應真實車款或規格。</p>
+          <!-- 分類是靜態文字，初階版不提供互動篩選。 -->
+          <ul class="category-list mb-4" aria-label="示意車型分類">
+            <li>城市純電</li>
+            <li>家庭休旅</li>
+            <li>運動房車</li>
+          </ul>
+          <!-- 手機 1 欄、md（768px）2 欄、lg（992px）以上 3 欄。 -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <article class="card h-100">
+                <div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表城市電動車">
+                  <span aria-hidden="true">◇</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="small text-primary fw-semibold mb-2">城市純電 · 示意</p>
+                  <h3 class="card-title h4">Aero One</h3>
+                  <p class="card-text text-muted-custom">以簡潔設計探索日常移動。</p>
+                  <a class="btn btn-outline-primary mt-auto align-self-start" href="#contact" aria-label="了解 Aero One 的示範流程">了解示範流程</a>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="card h-100">
+                <div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表家庭休旅車">
+                  <span aria-hidden="true">⬡</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="small text-primary fw-semibold mb-2">家庭休旅 · 示意</p>
+                  <h3 class="card-title h4">Vista Two</h3>
+                  <p class="card-text text-muted-custom">將空間與靈活性放進同一趟旅程。</p>
+                  <a class="btn btn-outline-primary mt-auto align-self-start" href="#contact" aria-label="了解 Vista Two 的示範流程">了解示範流程</a>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="card h-100">
+                <div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表運動房車">
+                  <span aria-hidden="true">△</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="small text-primary fw-semibold mb-2">運動房車 · 示意</p>
+                  <h3 class="card-title h4">Motion Three</h3>
+                  <p class="card-text text-muted-custom">用俐落線條呈現駕駛的節奏。</p>
+                  <a class="btn btn-outline-primary mt-auto align-self-start" href="#contact" aria-label="了解 Motion Three 的示範流程">了解示範流程</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="approach" class="feature py-5" aria-labelledby="approach-title">
+        <div class="container py-4">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="text-uppercase text-muted-custom fw-semibold mb-2">Our approach</p>
+              <h2 id="approach-title" class="section-title">從觀察到再創作</h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="lead mb-2">觀察真實網站如何組織車型分類、卡片與行動入口，再用自己的文案與示意素材完成一個原創頁面。</p>
+              <p class="mb-0">本頁採手機優先版型、清楚標題、可見表單標籤與鍵盤焦點。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-5" aria-labelledby="contact-title">
+        <div class="container py-4">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <p class="text-uppercase text-muted-custom fw-semibold mb-2">Practice</p>
+              <h2 id="contact-title" class="section-title">表單操作示範</h2>
+              <p>這是前端驗證練習。送出後只在畫面顯示訊息，不會傳送或儲存資料。</p>
+            </div>
+            <div class="col-lg-7">
+              <!-- 沒有後端；先停用欄位，待提交攔截器就緒才啟用。 -->
+              <form id="demo-form" autocomplete="off" aria-describedby="form-help">
+                <p id="form-help" class="small text-muted-custom">必填欄位請使用虛構稱呼，例如「同學 A」。完成後資料會清空。</p>
+                <noscript><p>請啟用 JavaScript 後使用表單示範；目前欄位已停用。</p></noscript>
+                <fieldset id="demo-fields" disabled>
+                  <legend class="visually-hidden">前端表單示範</legend>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">虛構稱呼（必填）</label>
+                    <input id="name" type="text" class="form-control" autocomplete="off" maxlength="30" placeholder="同學 A" aria-describedby="form-help" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="interest" class="form-label">感興趣的分類（必填）</label>
+                    <select id="interest" class="form-select" required>
+                      <option value="">請選擇</option>
+                      <option>城市純電</option>
+                      <option>家庭休旅</option>
+                      <option>運動房車</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary" type="submit">送出示範</button>
+                </fieldset>
+                <p id="form-result" class="mt-3" role="status" aria-live="polite">
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <p class="mb-2 fw-semibold">駕馭新視角｜HTML 與 Bootstrap 教學原型</p>
+        <p class="small mb-0">非 BMW 官方網站。頁面資訊架構參考 BMW 台灣「探索所有車型」頁；示意名稱、文案與 CSS／幾何圖形為課堂原創內容，未使用官方照片或 Logo。<a class="link-light" href="https://www.bmw.com.tw/zh/all-models.html">查看觀察來源</a>
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script>
+      const demoForm = document.querySelector('#demo-form');
+      const demoFields = document.querySelector('#demo-fields');
+      const demoName = document.querySelector('#name');
+      const formResult = document.querySelector('#form-result');
+      const menu = document.querySelector('#menu');
+      const menuToggle = document.querySelector('.navbar-toggler');
+
+      // 原生 required 驗證處理空值；另排除只有空白的稱呼。
+      demoName.addEventListener('input', () => {
+        demoName.setCustomValidity(
+          demoName.value && !demoName.value.trim() ? '請輸入虛構稱呼，不能只有空白。' : ''
+        );
+      });
+
+      demoForm.addEventListener('input', () => { formResult.textContent = ''; });
+      demoForm.addEventListener('invalid', () => { formResult.textContent = ''; }, true);
+      demoForm.addEventListener('submit', (event) => {
+        // 取消瀏覽器預設提交；不使用 fetch、儲存 API 或資料輸出。
+        event.preventDefault();
+        if (!demoForm.reportValidity()) return;
+        demoForm.reset();
+        demoName.setCustomValidity('');
+        formResult.textContent = '示範完成；資料已清空，沒有傳送或儲存。';
+      });
+      demoFields.disabled = false;
+
+      // 小螢幕選取連結後收合選單，焦點移至目的區塊。
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (!window.bootstrap || !menu.classList.contains('show')) return;
+          const target = document.querySelector(link.getAttribute('href'));
+          menu.addEventListener('hidden.bs.collapse', () => {
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+            target.scrollIntoView();
+          }, { once: true });
+          bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false }).hide();
+        });
+      });
+      menu.addEventListener('shown.bs.collapse', () => { menuToggle.setAttribute('aria-label', '關閉選單'); });
+      menu.addEventListener('hidden.bs.collapse', () => { menuToggle.setAttribute('aria-label', '開啟選單'); });
+    </script>
+  </body>
+</html>

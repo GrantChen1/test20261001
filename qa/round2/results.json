@@ -1,0 +1,279 @@
+{
+  "scope": "layout, comparison attributes, link names/targets, static categories, affected focus path; no full form/storage retest",
+  "unchangedFormHTML": true,
+  "unchangedExecutableInlineJavaScript": true,
+  "htmlNestingAndUniqueIDs": true,
+  "htmlSHA256": "a27426bb16a843a6565421ae18b84c3a98326fd08eeaff8e930d3a9a7f219492",
+  "375": {
+    "viewport": 375,
+    "documentWidth": 360,
+    "titleLines": [
+      "探索不同的移動想像"
+    ],
+    "titleWidth": 336,
+    "cards": [
+      {
+        "x": 12,
+        "y": 1026.96875,
+        "width": 336,
+        "height": 489.609375,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "純電"
+          },
+          {
+            "label": "座位",
+            "value": "4 席"
+          },
+          {
+            "label": "情境",
+            "value": "城市通勤"
+          }
+        ],
+        "linkText": "了解示範流程：Aero One",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 12,
+        "y": 1540.578125,
+        "width": 336,
+        "height": 489.609375,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "油電混合"
+          },
+          {
+            "label": "座位",
+            "value": "7 席"
+          },
+          {
+            "label": "情境",
+            "value": "家庭出遊"
+          }
+        ],
+        "linkText": "了解示範流程：Vista Two",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 12,
+        "y": 2054.1875,
+        "width": 336,
+        "height": 489.609375,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "汽油"
+          },
+          {
+            "label": "座位",
+            "value": "5 席"
+          },
+          {
+            "label": "情境",
+            "value": "公路旅行"
+          }
+        ],
+        "linkText": "了解示範流程：Motion Three",
+        "ariaLabel": null,
+        "overflowing": 0
+      }
+    ],
+    "staticCategory": "分類索引（靜態文字）：城市純電、家庭休旅、運動房車。",
+    "badAnchors": 0,
+    "accessibleLinkNames": [
+      "了解示範流程 ：Aero One",
+      "了解示範流程 ：Vista Two",
+      "了解示範流程 ：Motion Three"
+    ],
+    "columns": 1,
+    "affectedFocusPath": "keyboard menu -> models; focus transfer and collapse passed"
+  },
+  "768": {
+    "viewport": 768,
+    "documentWidth": 753,
+    "titleLines": [
+      "探索不同的移動想像"
+    ],
+    "titleWidth": 547.171875,
+    "cards": [
+      {
+        "x": 28.5,
+        "y": 1039.4375,
+        "width": 336,
+        "height": 491.015625,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "純電"
+          },
+          {
+            "label": "座位",
+            "value": "4 席"
+          },
+          {
+            "label": "情境",
+            "value": "城市通勤"
+          }
+        ],
+        "linkText": "了解示範流程：Aero One",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 388.5,
+        "y": 1039.4375,
+        "width": 336,
+        "height": 491.015625,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "油電混合"
+          },
+          {
+            "label": "座位",
+            "value": "7 席"
+          },
+          {
+            "label": "情境",
+            "value": "家庭出遊"
+          }
+        ],
+        "linkText": "了解示範流程：Vista Two",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 28.5,
+        "y": 1554.453125,
+        "width": 336,
+        "height": 491.015625,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "汽油"
+          },
+          {
+            "label": "座位",
+            "value": "5 席"
+          },
+          {
+            "label": "情境",
+            "value": "公路旅行"
+          }
+        ],
+        "linkText": "了解示範流程：Motion Three",
+        "ariaLabel": null,
+        "overflowing": 0
+      }
+    ],
+    "staticCategory": "分類索引（靜態文字）：城市純電、家庭休旅、運動房車。",
+    "badAnchors": 0,
+    "accessibleLinkNames": [
+      "了解示範流程 ：Aero One",
+      "了解示範流程 ：Vista Two",
+      "了解示範流程 ：Motion Three"
+    ],
+    "columns": 2
+  },
+  "1440": {
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "titleLines": [
+      "探索不同的移動想像"
+    ],
+    "titleWidth": 704,
+    "cards": [
+      {
+        "x": 64.5,
+        "y": 1024.78125,
+        "width": 416,
+        "height": 492.578125,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "純電"
+          },
+          {
+            "label": "座位",
+            "value": "4 席"
+          },
+          {
+            "label": "情境",
+            "value": "城市通勤"
+          }
+        ],
+        "linkText": "了解示範流程：Aero One",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 504.5,
+        "y": 1024.78125,
+        "width": 416,
+        "height": 492.578125,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "油電混合"
+          },
+          {
+            "label": "座位",
+            "value": "7 席"
+          },
+          {
+            "label": "情境",
+            "value": "家庭出遊"
+          }
+        ],
+        "linkText": "了解示範流程：Vista Two",
+        "ariaLabel": null,
+        "overflowing": 0
+      },
+      {
+        "x": 944.5,
+        "y": 1024.78125,
+        "width": 416,
+        "height": 492.578125,
+        "disclaimer": "虛構示意屬性（非真車規格）",
+        "attributes": [
+          {
+            "label": "動力",
+            "value": "汽油"
+          },
+          {
+            "label": "座位",
+            "value": "5 席"
+          },
+          {
+            "label": "情境",
+            "value": "公路旅行"
+          }
+        ],
+        "linkText": "了解示範流程：Motion Three",
+        "ariaLabel": null,
+        "overflowing": 0
+      }
+    ],
+    "staticCategory": "分類索引（靜態文字）：城市純電、家庭休旅、運動房車。",
+    "badAnchors": 0,
+    "accessibleLinkNames": [
+      "了解示範流程 ：Aero One",
+      "了解示範流程 ：Vista Two",
+      "了解示範流程 ：Motion Three"
+    ],
+    "columns": 3
+  },
+  "runtimeErrors": []
+}

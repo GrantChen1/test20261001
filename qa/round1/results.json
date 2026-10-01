@@ -1,0 +1,225 @@
+{
+  "375": {
+    "viewport": 375,
+    "documentWidth": 360,
+    "cards": [
+      {
+        "x": 12,
+        "y": 1050.34375,
+        "width": 336,
+        "height": 360.828125
+      },
+      {
+        "x": 12,
+        "y": 1435.171875,
+        "width": 336,
+        "height": 360.828125
+      },
+      {
+        "x": 12,
+        "y": 1820,
+        "width": 336,
+        "height": 360.828125
+      }
+    ],
+    "badAnchors": 0,
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "探索不同的移動想像"
+      },
+      {
+        "tag": "H2",
+        "text": "品牌研究與課堂再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "三種旅程，一種好奇"
+      },
+      {
+        "tag": "H3",
+        "text": "Aero One"
+      },
+      {
+        "tag": "H3",
+        "text": "Vista Two"
+      },
+      {
+        "tag": "H3",
+        "text": "Motion Three"
+      },
+      {
+        "tag": "H2",
+        "text": "從觀察到再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "表單操作示範"
+      }
+    ],
+    "columns": 1,
+    "keyboardSkip": true,
+    "navigation": "4 links passed; collapse and focus passed on 375 / 768",
+    "form": {
+      "empty": "blocked",
+      "whitespace": "blocked",
+      "missingCategory": "blocked",
+      "enterSubmit": "passed",
+      "fieldsCleared": true,
+      "requestsDuringForm": 0,
+      "storageWrites": 0,
+      "cookies": ""
+    }
+  },
+  "768": {
+    "viewport": 768,
+    "documentWidth": 753,
+    "cards": [
+      {
+        "x": 28.5,
+        "y": 1052.21875,
+        "width": 336,
+        "height": 362.234375
+      },
+      {
+        "x": 388.5,
+        "y": 1052.21875,
+        "width": 336,
+        "height": 362.234375
+      },
+      {
+        "x": 28.5,
+        "y": 1438.453125,
+        "width": 336,
+        "height": 362.234375
+      }
+    ],
+    "badAnchors": 0,
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "探索不同的移動想像"
+      },
+      {
+        "tag": "H2",
+        "text": "品牌研究與課堂再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "三種旅程，一種好奇"
+      },
+      {
+        "tag": "H3",
+        "text": "Aero One"
+      },
+      {
+        "tag": "H3",
+        "text": "Vista Two"
+      },
+      {
+        "tag": "H3",
+        "text": "Motion Three"
+      },
+      {
+        "tag": "H2",
+        "text": "從觀察到再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "表單操作示範"
+      }
+    ],
+    "columns": 2,
+    "keyboardSkip": true,
+    "navigation": "4 links passed; collapse and focus passed on 375 / 768",
+    "form": {
+      "empty": "blocked",
+      "whitespace": "blocked",
+      "missingCategory": "blocked",
+      "enterSubmit": "passed",
+      "fieldsCleared": true,
+      "requestsDuringForm": 0,
+      "storageWrites": 0,
+      "cookies": ""
+    }
+  },
+  "1440": {
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "cards": [
+      {
+        "x": 64.5,
+        "y": 1052.75,
+        "width": 416,
+        "height": 363.796875
+      },
+      {
+        "x": 504.5,
+        "y": 1052.75,
+        "width": 416,
+        "height": 363.796875
+      },
+      {
+        "x": 944.5,
+        "y": 1052.75,
+        "width": 416,
+        "height": 363.796875
+      }
+    ],
+    "badAnchors": 0,
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "探索不同的移動想像"
+      },
+      {
+        "tag": "H2",
+        "text": "品牌研究與課堂再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "三種旅程，一種好奇"
+      },
+      {
+        "tag": "H3",
+        "text": "Aero One"
+      },
+      {
+        "tag": "H3",
+        "text": "Vista Two"
+      },
+      {
+        "tag": "H3",
+        "text": "Motion Three"
+      },
+      {
+        "tag": "H2",
+        "text": "從觀察到再創作"
+      },
+      {
+        "tag": "H2",
+        "text": "表單操作示範"
+      }
+    ],
+    "columns": 3,
+    "keyboardSkip": true,
+    "navigation": "4 links passed; collapse and focus passed on 375 / 768",
+    "form": {
+      "empty": "blocked",
+      "whitespace": "blocked",
+      "missingCategory": "blocked",
+      "enterSubmit": "passed",
+      "fieldsCleared": true,
+      "requestsDuringForm": 0,
+      "storageWrites": 0,
+      "cookies": ""
+    }
+  },
+  "noJavaScript": "fieldset disabled; noscript message visible",
+  "additionalChecks": {
+    "keyboardMobileMenu": "Enter expands; Tab and Enter navigate with focus transfer",
+    "keyboardForm": "Tab reaches select and submit",
+    "reducedMotion": "no card transition or transform"
+  },
+  "runtimeErrors": []
+}

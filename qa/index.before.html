@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML 與 Bootstrap 汽車展示網頁教學原型。">
+  <title>駕馭新視角｜汽車展示教學原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --ink:#16202b; --blue:#1e5b88; --sky:#dceef6; }
+    body { color:var(--ink); }
+    .navbar { background:#fff; box-shadow:0 2px 20px #152d4310; }
+    .brand-mark { display:inline-block; width:1rem; height:1rem; background:var(--blue); transform:rotate(45deg); margin-right:.5rem; }
+    .hero { min-height:520px; display:flex; align-items:center; color:#fff; background:linear-gradient(115deg,#102a40e8,#15567eaa), radial-gradient(circle at 75% 40%,#81bed6 0 13%,#24465d 13% 31%,#122536 31% 100%); }
+    .hero h1 { max-width:12ch; font-weight:700; line-height:1.08; }
+    .hero p { max-width:40rem; }
+    .section-title { font-weight:700; letter-spacing:.02em; }
+    .vehicle-art { min-height:180px; display:grid; place-items:center; background:linear-gradient(135deg,#edf5f8,#c7dce6); }
+    .vehicle-art span { font-size:4rem; line-height:1; color:#6e96aa; }
+    .card { border-color:#dbe4e8; box-shadow:0 8px 28px #1630440c; }
+    .card:hover { transform:translateY(-3px); box-shadow:0 14px 30px #1630441a; }
+    .feature { background:#eef5f8; }
+    .btn-primary { background:var(--blue); border-color:var(--blue); }
+    .text-muted-custom { color:#52616e; }
+    :focus-visible { outline:3px solid #f1a44a!important; outline-offset:3px; }
+    @media (prefers-reduced-motion:no-preference) { .card { transition:transform .2s,box-shadow .2s; } }
+  </style>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute bg-white p-2" href="#main">跳到主要內容</a>
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="主選單">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#top"><span class="brand-mark" aria-hidden="true"></span>駕馭新視角</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="開啟選單"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#models">示意車款</a></li>
+            <li class="nav-item"><a class="nav-link" href="#approach">設計方法</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">表單示範</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero py-5" aria-labelledby="hero-title">
+      <div class="container py-5">
+        <p class="text-uppercase fw-semibold mb-3">HTML × Bootstrap 課堂作品</p>
+        <h1 id="hero-title" class="display-3 mb-4">探索不同的移動想像</h1>
+        <p class="lead mb-4">從資訊架構、響應式卡片到清楚的行動入口，練習製作一個易讀、可操作的汽車展示頁。</p>
+        <a class="btn btn-light btn-lg" href="#models">探索示意車款</a>
+      </div>
+    </section>
+    <section id="models" class="py-5" aria-labelledby="models-title">
+      <div class="container py-4">
+        <p class="text-uppercase text-muted-custom fw-semibold mb-2">Explore</p>
+        <h2 id="models-title" class="section-title mb-2">三種旅程，一種好奇</h2>
+        <p class="text-muted-custom mb-4">以下名稱與分類皆為教學示意，沒有對應真實車款或規格。</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><article class="card h-100"><div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表城市電動車"><span aria-hidden="true">◇</span></div><div class="card-body d-flex flex-column"><p class="small text-primary fw-semibold mb-2">城市純電 · 示意</p><h3 class="card-title h4">Aero One</h3><p class="card-text text-muted-custom">以簡潔設計探索日常移動。</p><a class="btn btn-outline-primary mt-auto align-self-start" href="#contact">了解示範流程</a></div></article></div>
+          <div class="col"><article class="card h-100"><div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表家庭休旅車"><span aria-hidden="true">⬡</span></div><div class="card-body d-flex flex-column"><p class="small text-primary fw-semibold mb-2">家庭休旅 · 示意</p><h3 class="card-title h4">Vista Two</h3><p class="card-text text-muted-custom">將空間與靈活性放進同一趟旅程。</p><a class="btn btn-outline-primary mt-auto align-self-start" href="#contact">了解示範流程</a></div></article></div>
+          <div class="col"><article class="card h-100"><div class="vehicle-art" role="img" aria-label="藍灰色幾何示意圖，代表運動房車"><span aria-hidden="true">△</span></div><div class="card-body d-flex flex-column"><p class="small text-primary fw-semibold mb-2">運動房車 · 示意</p><h3 class="card-title h4">Motion Three</h3><p class="card-text text-muted-custom">用俐落線條呈現駕駛的節奏。</p><a class="btn btn-outline-primary mt-auto align-self-start" href="#contact">了解示範流程</a></div></article></div>
+        </div>
+      </div>
+    </section>
+    <section id="approach" class="feature py-5" aria-labelledby="approach-title"><div class="container py-4"><div class="row align-items-center g-4"><div class="col-lg-5"><p class="text-uppercase text-muted-custom fw-semibold mb-2">Our approach</p><h2 id="approach-title" class="section-title">從觀察到再創作</h2></div><div class="col-lg-7"><p class="lead mb-2">觀察真實網站如何組織車型分類、卡片與行動入口，再用自己的文案與示意素材完成一個原創頁面。</p><p class="mb-0">本頁採手機優先版型、清楚標題、可見表單標籤與鍵盤焦點。</p></div></div></div></section>
+    <section id="contact" class="py-5" aria-labelledby="contact-title"><div class="container py-4"><div class="row g-4"><div class="col-lg-5"><p class="text-uppercase text-muted-custom fw-semibold mb-2">Practice</p><h2 id="contact-title" class="section-title">表單操作示範</h2><p>這是前端驗證練習。送出後只在畫面顯示訊息，不會傳送或儲存資料。</p></div><div class="col-lg-7"><form id="demo-form"><div class="mb-3"><label for="name" class="form-label">稱呼</label><input id="name" name="name" class="form-control" autocomplete="off" required></div><div class="mb-3"><label for="interest" class="form-label">感興趣的分類</label><select id="interest" name="interest" class="form-select" required><option value="">請選擇</option><option>城市純電</option><option>家庭休旅</option><option>運動房車</option></select></div><button class="btn btn-primary" type="submit">送出示範</button><p id="form-result" class="mt-3" role="status" aria-live="polite"></p></form></div></div></div></section>
+  </main>
+  <footer class="bg-dark text-white py-4"><div class="container"><p class="mb-2 fw-semibold">駕馭新視角｜HTML 與 Bootstrap 教學原型</p><p class="small mb-0">非 BMW 官方網站。頁面資訊架構參考 BMW 台灣「探索所有車型」頁；示意名稱、文案與圖形為課堂原創內容。<a class="link-light" href="https://www.bmw.com.tw/zh/all-models.html">查看觀察來源</a></p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('#demo-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.querySelector('#form-result').textContent = '示範送出成功；資料沒有傳送或儲存。';
+      event.currentTarget.reset();
+    });
+  </script>
+</body>
+</html>
